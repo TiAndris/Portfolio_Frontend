@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 400px;
+}
+
+header h1 {
+    color: #FFF;
+    font-family: arial, sans-serif;
+    font-size: 36px;
+    margin: 0 0 45px 90px;
+}
+
+header nav {
+    background-color: #200D0F;
+    height: 60px;
+    display: flex;
+    font-family: arial, sans-serif;
+    font-size: 18px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    justify-items: stretch;
+    line-height: 60px;
+}
+
+header nav a {
+    background-color: #211313;
+    color: #EEE;
+    padding: 0 30px;
+    text-decoration: none;
+}
+
+header nav a:active {
+    background-color: #EC9579;
+    color: #211313;
+}
+
+#about {
+    align-items: stretch;
+    background-color: #A0A0A0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 400px;
+}
+
+.about-left {
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: end;
+}
+
+.about-left img:first-child {
+    height: 200px;
+    margin: 0 -160px 120px 0;
+    width: 80%;
+}
+
+.about-left img:last-child {
+    height: 200px;
+    margin: 0 10px 80px 0;
+    width: 200px;
+}
+
+.about-right {
+    align-items: stretch;
+    color: #493038;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-family: arial, sans-serif;
+    font-size: 16px;
+    justify-content: center;
+    gap: 20px;
+    line-height: 24px;
+    padding: 0 48px;
+}
+
+.about-right h2 {
+    font-family: arial, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.about-right div:last-child span:first-child {
+    font-weight: bold;
+}
+
+#portfolio {
+    background-color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+#portfolio h2 {
+    font-family: arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 0 20px 0;
+}
+
+.portfolio-list img {
+    height: 365px;
+    width: 480px;
+}
+
+#contacts {
+    align-items: center;
+    background-color: #F0F0F0;
+    color: #493038;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 200px;
+    justify-content: center;
+}
+
+#contacts h2 {
+    font-family: arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#contacts div {
+    line-height: 20px;
+    font-family: arial, sans-serif;
+    font-size: 16px;
+}
+
+#contacts a {
+    color: #c70707;
+    text-decoration: none;
+}
+
+#contacts .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    height: 32px;
+}
+
+#contacts .icons img {
+    height: 32px;
+    width: 32px;
+}
+
+footer {
+    background-color: #222;
+    color: #FEDBB5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    height: 100px;
+    text-align: center;
+}
+
+footer div:last-child {
+    font-size: 16px;
+}
+
+/* Basic Styles */
+#hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+/* Hide Hamburger Icon for Larger Screens */
+#hamburger-icon {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    /* Other styling as needed */
+}
+
+/* Responsive Media Query */
+@media screen and (max-width: 900px) {
+    #hamburger-icon {
+        display: block;
+        padding: 2%;
+        cursor: pointer;
+    }
+
+    /* Menu Open Style */
+    .hamburger.open {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+/* Optional: Style changes when menu is open */
+#hamburger-icon.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+#hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+#hamburger-icon.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
